@@ -11,7 +11,7 @@ const player2 = {
     , speed: 5, width: 55, height: 100
 };
 const keyz1 = { ArrowRight: false, ArrowLeft: false, ArrowUp: false, ArrowDown: false };
-const keyz2 = { KeyA: false, KeyS: false, KeyW: false, KeyX: false };
+const keyz2 = { KeyA: false, KeyD: false, KeyW: false, KeyS: false };
 requestAnimationFrame(draw);
 
 document.addEventListener('keydown', keyDown);
@@ -29,8 +29,8 @@ function keyUp(event) {
 function move() {
     if (keyz1.ArrowRight) { player1.x += player1.speed; } else if (keyz1.ArrowLeft) { player1.x -= player1.speed; };
     if (keyz1.ArrowUp) { player1.y -= player1.speed; } else if (keyz1.ArrowDown) { player1.y += player1.speed; };
-    if (keyz2.KeyS) { player2.x += player2.speed; } else if (keyz2.KeyA) { player2.x -= player2.speed; };
-    if (keyz2.KeyW) { player2.y -= player2.speed; } else if (keyz2.KeyX) { player2.y += player2.speed; };
+    if (keyz2.KeyD) { player2.x += player2.speed; } else if (keyz2.KeyA) { player2.x -= player2.speed; };
+    if (keyz2.KeyW) { player2.y -= player2.speed; } else if (keyz2.KeyS) { player2.y += player2.speed; };
 }
 function checkCol(ob1, ob2) {
     /*  if(ob1.x<ob2.x+ob2.width && ob1.x + ob1.width > ob2.x){

@@ -31,9 +31,9 @@ const keyz1 = {
 };
 const keyz2 = {
     KeyA: false
-    , KeyS: false
+    , KeyD: false
     , KeyW: false
-    , KeyX: false
+    , KeyS: false
 };
 requestAnimationFrame(draw);
 document.addEventListener('keydown', keyDown);
@@ -70,7 +70,7 @@ function move() {
     else if (keyz1.ArrowDown) {
         player1.y += player1.speed;
     };
-    if (keyz2.KeyS) {
+    if (keyz2.KeyD) {
         player2.x += player2.speed;
     }
     else if (keyz2.KeyA) {
@@ -79,7 +79,7 @@ function move() {
     if (keyz2.KeyW) {
         player2.y -= player2.speed;
     }
-    else if (keyz2.KeyX) {
+    else if (keyz2.KeyS) {
         player2.y += player2.speed;
     };
     ball.x += ball.xs;
